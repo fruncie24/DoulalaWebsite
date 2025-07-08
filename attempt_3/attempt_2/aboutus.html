@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doulala</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class = "faq"> 
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        
+        <li>
+          <a href="index.html">
+            <img src = "assets/images/Doulala_Lotus.PNG" width = 60px style = "padding: 5px;">
+            <img src="assets/images/Doulala_Text_Only.png" width="120px" style="padding: 5px;">
+          </a>
+        </li>
+        <li class="textlink"><a href="index.html">Home</a></li>
+        <li class="textlink active"><a href="aboutus.html">About Us</a></li>
+        <li class="textlink"><a href="faqs.html">FAQs</a></li>
+        <li class="navsignup_btn"><a href="https://www.doulala.ai/">Sign Up</a></li>
+      </ul>
+    </nav>
+    
+    
+  
+     <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+      });
+    </script>
+ 
+
+
+  <h1 class = "faq-title"> About Us </h1>
+  <section class="tale-block">
+  <div class="tale-content">
+    <div class="tale-layout">
+      <div class="tale-text-section">
+        <h2 class="tale-title">Our Story</h2>
+        <p class="tale-text">
+          Doulala is the next generation pregnancy platform, combining compassionate, expert doula support with tailored information to empower women throughout their pregnancy journeys and beyond. Doulala's founder, <a href = "https://www.linkedin.com/in/folasade-runcie/"> <strong>Folasade Runcie</strong></a>, was inspired to launch Doulala after witnessing her sister—a Harvard-trained emergency physician—struggle to find clear, reliable guidance and support during her own pregnancy. This experience highlighted how even the most knowledgeable and well-resourced women lack the necessary support and information during a critical time.
+        </p>
+      </div>
+      <div class="tale-image-section">
+        <img src="assets/images/Folasade_image.jpg" alt="Doulala Founder Folasade Runcie" class="tale-image">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="story-block">
+  <div class="story-content">
+    <h2 class="story-title">Our Vision</h2>
+    
+    <p class="mission-intro">
+      At Doulala, we leverage technology to bridge the gaps in traditional maternal care by providing:
+    </p>
+    <ul class="mission-list">
+      <li><strong>On-demand access to trained doulas</strong> for emotional, mental, and practical support throughout pregnancy and postpartum</li>
+      <li><strong>Personalized, easy-to-understand information</strong> tailored to each user's needs and preferences</li>
+    </ul>
+    <p class="mission-conclusion">
+      By integrating these services, Doulala empowers women to make informed decisions, find community, and receive the continuous care they deserve, regardless of background or circumstance.
+    </p>
+
+  
+</section>
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    <p class="footer-contact">
+      Questions? Contact us at
+      <a href="mailto:info@doulala.ai">info@doulala.ai</a>
+      — we’re happy to help!
+    </p>
+  </div>
+</footer>
+</body>
+</html>
+    

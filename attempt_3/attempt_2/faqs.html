@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doulala</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  </head>
+             
+  <body class = "faq">
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        
+        <li>
+          <a href="index.html">
+            <img src = "assets/images/Doulala_Lotus.PNG" width = 60px style = "padding: 5px;">
+            <img src="assets/images/Doulala_Text_Only.png" width="120px" style="padding: 5px;">
+          </a>
+        </li>
+        <li class="textlink"><a href="index.html">Home</a></li>
+        <li class="textlink"><a href="aboutus.html">About Us</a></li>
+        <li class="textlink active"><a href="faqs.html">FAQs</a></li>
+        <li class="navsignup_btn"><a href="https://www.doulala.ai/">Sign Up</a></li>
+      </ul>
+    </nav>
+         
+    <h1 class="faq-title">Frequently Asked Questions</h1>
+  
+    <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">What does it cost? <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>Beta pricing is designed for accessibility and commitment—details shared during onboarding.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What is a doula? <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>Doulas are trained, non-medical professionals who provide continuous physical, emotional, and informational support to individuals before, during, and shortly after childbirth.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Who are the doulas? <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>We work with vetted doulas in the Chicagoland area who have been trained and certified by accredited organizations such as DONA and CAPPA. Additionally, we provide training to all of the doulas who join our platform. </p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Who can participate? <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>Mothers and parents who are in their pre-natal journey or recently postpartum </p>
+      </div>
+  </div>
+  <div class="faq-item">
+      <button class="faq-question">What technology do I need?  <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>Services will be delivered via familiar platforms such as Zoom and Calendly.  </p>
+  </div>
+  </div>
+   <div class="faq-item">
+      <button class="faq-question">Is there an option for in-person  <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>While we are a virtual first platform, we will host in-person events every month where you can connect with doulas and peers in real life!    </p>
+  </div>
+  </div>
+   <div class="faq-item">
+      <button class="faq-question">If I find a doula I really like, can I stick with them? <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>Absolutely! Doulala is focused on connecting you with the best support to empower you on your motherhood journey. If you find a doula you really like, you can continue to request sessions with that doula.  </p>
+  </div>
+  </div>
+   <div class="faq-item">
+      <button class="faq-question">Is my information secure?   <span class="faq-icon"></span></button>
+      <div class="faq-answer">
+        <p>User privacy is of paramount importance. Participant data will be handled securely and with confidentiality.</p>
+  </div>
+  </div>
+  </div>
+  <footer class="site-footer">
+  <div class="footer-content">
+    
+    <p class="footer-contact">
+      Questions? Contact us at
+      <a href="mailto:info@doulala.ai">info@doulala.ai</a>
+      — we’re happy to help!
+    </p>
+  </div>
+</footer>
+  
+  <script src="faq.js"></script>
+  <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+      });
+    </script>
+  
+  </body>
+  
+    
+</html>
