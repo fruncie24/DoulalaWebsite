@@ -1,101 +1,49 @@
-const track = document.getElementById('carouselTrack');
-const tenetBoxes = Array.from(track.children);
-const totalTenets = tenetBoxes.length;
-const maxVisible = 3;
+let currentSlide = 0;
+        const totalSlides = 4;
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtnMobile = document.getElementById('prevBtnMobile');
+        const nextBtnMobile = document.getElementById('nextBtnMobile');
+        const dots = document.querySelectorAll('.dot');
 
-const prevBtn = document.getElementById('carouselPrev');
-const nextBtn = document.getElementById('carouselNext');
+        function updateCarousel() {
+            const translateX = -currentSlide * 100;
+            carousel.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
 
-let itemsPerView = getItemsPerView();
-let currentIndex = itemsPerView; // Start at first real item (after clones)
-let itemWidth = 0;
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
 
-function getItemsPerView() {
-  if (window.innerWidth <= 500) return 1;
-  if (window.innerWidth <= 950) return 2;
-  return 3;
-}
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
 
-function updateItemWidth() {
-  const box = track.querySelector('.tenet-box');
-  if (!box) return 0;
-  const style = getComputedStyle(box);
-  return box.offsetWidth +
-    parseInt(style.marginLeft) +
-    parseInt(style.marginRight);
-}
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
 
-function setupClones() {
-  // Remove old clones
-  track.querySelectorAll('.clone').forEach(clone => clone.remove());
+        // Event listeners for desktop arrows
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
 
-  // Clone last N and prepend
-  for (let i = 0; i < itemsPerView; i++) {
-    const clone = tenetBoxes[totalTenets - 1 - i].cloneNode(true);
-    clone.classList.add('clone');
-    track.insertBefore(clone, track.firstChild);
-  }
-  // Clone first N and append
-  for (let i = 0; i < itemsPerView; i++) {
-    const clone = tenetBoxes[i].cloneNode(true);
-    clone.classList.add('clone');
-    track.appendChild(clone);
-  }
-}
+        // Event listeners for mobile arrows
+        nextBtnMobile.addEventListener('click', nextSlide);
+        prevBtnMobile.addEventListener('click', prevSlide);
 
-function setTrackPosition(animate = true) {
-  if (!animate) track.style.transition = 'none';
-  else track.style.transition = '';
-  track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-  if (!animate) {
-    // Force reflow to apply transition reset
-    void track.offsetWidth;
-    track.style.transition = '';
-  }
-}
+        // Event listeners for dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
 
-function goToIndex(index, animate = true) {
-  currentIndex = index;
-  setTrackPosition(animate);
-}
-
-function next() {
-  goToIndex(currentIndex + 1);
-}
-function prev() {
-  goToIndex(currentIndex - 1);
-}
-
-function handleTransitionEnd() {
-  if (currentIndex >= totalTenets + itemsPerView) {
-    // Jump back to real first
-    goToIndex(itemsPerView, false);
-  } else if (currentIndex < itemsPerView) {
-    // Jump to real last
-    goToIndex(totalTenets + itemsPerView - 1, false);
-  }
-}
-
-function onResize() {
-  itemsPerView = getItemsPerView();
-  setupClones();
-  itemWidth = updateItemWidth();
-  currentIndex = itemsPerView;
-  setTrackPosition(false);
-}
-
-prevBtn.addEventListener('click', prev);
-nextBtn.addEventListener('click', next);
-track.addEventListener('transitionend', handleTransitionEnd);
-window.addEventListener('resize', onResize);
-
-// Initial setup
-setupClones();
-itemWidth = updateItemWidth();
-setTrackPosition(false);
-
-// Recalculate on font load (for accurate width)
-window.addEventListener('load', () => {
-  itemWidth = updateItemWidth();
-  setTrackPosition(false);
-});
+        // Initialize
+        updateCarousel();
