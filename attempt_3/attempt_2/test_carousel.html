@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoulaConnect Features</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+           
+            line-height: 1.6;
+            color: #374151;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .features-section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 42rem;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .carousel-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .carousel-wrapper {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 1rem;
+            max-width: 600px;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 400%;
+        }
+
+        .feature-card {
+            flex: 0 0 25%;
+            width: 25%;
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f3f4f6;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            margin: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .arrow-button {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .arrow-button:hover {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+            transform: scale(1.05);
+        }
+
+        .arrow-button svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #6b7280;
+        }
+
+        .arrow-button:hover svg {
+            color: #3b82f6;
+        }
+
+        .arrow-left {
+            margin-right: 1rem;
+        }
+
+        .arrow-right {
+            margin-left: 1rem;
+        }
+
+        .mobile-arrows {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background-color: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #3b82f6;
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background-color: #9ca3af;
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon-wrapper {
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon-wrapper {
+            transform: scale(1.05);
+        }
+
+        .blue-bg { background-color: #dbeafe; }
+        .teal-bg { background-color: #ccfbf1; }
+        .green-bg { background-color: #dcfce7; }
+        .rose-bg { background-color: #fce7f3; }
+
+        .feature-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .blue-icon { color: #2563eb; }
+        .teal-icon { color: #0d9488; }
+        .green-icon { color: #16a34a; }
+        .rose-icon { color: #e11d48; }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 0;
+        }
+
+        .feature-description {
+            font-size: 1.125rem;
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-highlight {
+            background-color: #dcfce7;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-highlight p {
+            color: #166534;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .feature-link {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .feature-link.blue { color: #2563eb; }
+        .feature-link.teal { color: #0d9488; }
+        .feature-link.green { color: #16a34a; }
+        .feature-link.rose { color: #e11d48; }
+
+        .feature-link:hover {
+            opacity: 0.8;
+            transform: translateX(4px);
+        }
+
+        .feature-link svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-link:hover svg {
+            transform: translateX(2px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .arrow-left,
+            .arrow-right {
+                display: none;
+            }
+
+            .carousel-section {
+                flex-direction: column;
+            }
+
+            .carousel-wrapper {
+                max-width: 100%;
+            }
+
+            .feature-card {
+                margin: 0 0.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-arrows {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .section-title {
+                font-size: 3.5rem;
+            }
+
+            .carousel-wrapper {
+                max-width: 700px;
+            }
+        }
+
+        /* Subtle animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .feature-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Comprehensive Support Throughout Your Journey
+                </h2>
+                <p class="section-subtitle">
+                    From one-on-one guidance to community support, we're here for every step of your pregnancy.
+                </p>
+            </div>
+
+            <div class="carousel-section">
+                <!-- Left Arrow (Desktop/Tablet) -->
+                <button class="arrow-button arrow-left" id="prevBtn">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Carousel -->
+                <div class="carousel-wrapper">
+                    <div class="carousel-container" id="carousel">
+                        <!-- Personalized Doula Care -->
+                        <div class="feature-card">
+                            <div class="feature-header">
+                                <div class="feature-icon-wrapper blue-bg">
+                                    <svg class="feature-icon blue-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title">Personalized Doula Care</h3>
+                            </div>
+                            <p class="feature-description">
+                                Book one-on-one sessions with experienced doulas for tailored guidance and reassurance—wherever you are.
+                            </p>
+                            <a href="#" class="feature-link blue">
+                                <span>Schedule a session</span>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Group Office Hours -->
+                        <div class="feature-card">
+                            <div class="feature-header">
+                                <div class="feature-icon-wrapper teal-bg">
+                                    <svg class="feature-icon teal-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title">Group Office Hours</h3>
+                            </div>
+                            <p class="feature-description">
+                                Join small-group virtual sessions to connect, share, and learn from doulas and peers in a supportive environment.
+                            </p>
+                            <a href="#" class="feature-link teal">
+                                <span>Join a group</span>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Text Support -->
+                        <div class="feature-card">
+                            <div class="feature-header">
+                                <div class="feature-icon-wrapper green-bg">
+                                    <svg class="feature-icon green-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title">Text Support</h3>
+                            </div>
+                            <p class="feature-description">
+                                Get answers and encouragement via text, so you're never alone with your questions or concerns.
+                            </p>
+                            <div class="feature-highlight">
+                                <p>📱 Doulas are available via text from 7am to 7pm central time</p>
+                            </div>
+                            <a href="#" class="feature-link green">
+                                <span>Start texting</span>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Peer-to-Peer Support -->
+                        <div class="feature-card">
+                            <div class="feature-header">
+                                <div class="feature-icon-wrapper rose-bg">
+                                    <svg class="feature-icon rose-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title">Peer-to-Peer Support</h3>
+                            </div>
+                            <p class="feature-description">
+                                Get matched with other mothers at similar stages of their pregnancy journey for ongoing encouragement, support, and real-life advice.
+                            </p>
+                            <a href="#" class="feature-link rose">
+                                <span>Find your match</span>
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Arrow (Desktop/Tablet) -->
+                <button class="arrow-button arrow-right" id="nextBtn">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Arrows -->
+                <div class="mobile-arrows">
+                    <button class="arrow-button" id="prevBtnMobile">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="arrow-button" id="nextBtnMobile">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Carousel Dots (positioned below the carousel) -->
+            <div class="carousel-dots">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+                <div class="dot" data-slide="3"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtnMobile = document.getElementById('prevBtnMobile');
+        const nextBtnMobile = document.getElementById('nextBtnMobile');
+        const dots = document.querySelectorAll('.dot');
+
+        function updateCarousel() {
+            const translateX = -currentSlide * 25;
+            carousel.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        // Event listeners for desktop arrows
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Event listeners for mobile arrows
+        nextBtnMobile.addEventListener('click', nextSlide);
+        prevBtnMobile.addEventListener('click', prevSlide);
+
+        // Event listeners for dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+
+        // Initialize
+        updateCarousel();
+    </script>
+</body>
+</html>
