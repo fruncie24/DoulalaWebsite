@@ -247,14 +247,9 @@ nav {
 
 /* --- PILOT LAUNCH SECTION --- */
 .pilot-launch-section {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
   padding: 40px 20px;
   text-align: center;
   margin: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .pilot-content {
@@ -262,14 +257,33 @@ nav {
   margin: 0 auto;
 }
 
-.pilot-headline {
+.pilot-announcement {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 25px 30px;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.pilot-headline-main {
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
   color: #b71158;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   line-height: 1.3;
   letter-spacing: -0.5px;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.05);
+}
+
+.pilot-headline-sub {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 500;
+  color: #082154;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .pilot-subheadline {
@@ -307,19 +321,9 @@ nav {
 
 /* --- MISSION STATEMENT SECTION --- */
 .mission-statement-section {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
   padding: 40px 20px;
   text-align: center;
   margin: 30px 20px;
-  border-radius: 20px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-}
-
-.mission-content {
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 .mission-text {
@@ -328,7 +332,9 @@ nav {
   line-height: 1.6;
   font-weight: 500;
   font-style: italic;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
 }
 
 /* Responsive adjustments for pilot and mission sections */
@@ -339,14 +345,13 @@ nav {
     margin: 20px 15px;
   }
   
+  .pilot-announcement {
+    padding: 20px 15px;
+  }
+  
   .pilot-signup-btn {
     padding: 16px 32px;
     font-size: 1.1rem;
-  }
-  
-  .content-box {
-    margin: 20px 10px;
-    padding: 25px 15px;
   }
 }
 
@@ -357,17 +362,16 @@ nav {
     margin: 15px 10px;
   }
   
-  .pilot-headline {
+  .pilot-announcement {
+    padding: 15px 10px;
+  }
+  
+  .pilot-headline-main {
     margin-bottom: 1rem;
   }
   
   .pilot-subheadline {
     margin-bottom: 2rem;
-  }
-  
-  .content-box {
-    margin: 15px 5px;
-    padding: 20px 10px;
   }
 }
 
