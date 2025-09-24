@@ -222,17 +222,60 @@ nav {
     max-height: 500px; /* Adjust as needed for your menu */
   }
   
+  /* Ensure logo stays visible on mobile */
+  .nav-links li:first-child {
+    display: flex !important;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 0;
+    background: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .nav-links li:first-child a {
+    display: flex !important;
+    align-items: center;
+    padding: 0;
+    width: auto;
+  }
+  
+  /* Logo image sizing for mobile */
+  .nav-links li:first-child img {
+    max-width: 45px !important;
+    max-height: 45px !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Ensure logo container is visible */
+  .nav-links li:first-child img:first-child {
+    margin-right: 5px;
+  }
+  
+  .nav-links li:first-child img:last-child {
+    max-width: 90px !important;
+  }
+  
   .nav-links li {
     margin: 1rem 0 1rem 1.5rem;
     display: block;
     padding: 12px 20px;
   }
+  
+  /* Override for non-logo items */
+  .nav-links li:not(:first-child) {
+    margin: 1rem 0 1rem 1.5rem;
+    display: block;
+    padding: 12px 20px;
+  }
+  
   .nav-links li.navsignup_btn {
     margin-left: 12px;
     padding: 12px 20px;
-  }
-  .nav-links.open li:first-child {
-    padding-left: 10px; 
   }
   .nav-links li a{
     padding-left: 0px;
@@ -241,6 +284,42 @@ nav {
   .nav-links li.navsignup_btn a{
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+/* Additional mobile logo fixes for very small screens */
+@media (max-width: 480px) {
+  .nav-links li:first-child {
+    padding: 8px 10px;
+  }
+  
+  .nav-links li:first-child img:first-child {
+    max-width: 40px !important;
+    max-height: 40px !important;
+  }
+  
+  .nav-links li:first-child img:last-child {
+    max-width: 80px !important;
+  }
+}
+
+/* Ensure logo is always visible in closed state */
+@media (max-width: 690px) {
+  nav {
+    position: relative;
+  }
+  
+  /* Logo should be visible even when menu is closed */
+  .nav-links li:first-child {
+    position: relative;
+    z-index: 1001;
+    background: #FFFFFF;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  /* Ensure hamburger doesn't overlap logo */
+  .nav-toggle {
+    z-index: 2001;
   }
 }
 
