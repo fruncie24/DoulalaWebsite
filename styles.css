@@ -27,7 +27,7 @@ body {
   flex-direction: column;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(360deg, rgba(231, 162, 186, 1) 0%, rgba(255, 240, 240, 1) 100%);
+  background: #f8f9ff;
 }
 
 html, body {
@@ -246,10 +246,12 @@ nav {
 
 /* --- PILOT LAUNCH SECTION --- */
 .pilot-launch-section {
-  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  background: white;
   padding: 60px 20px;
   text-align: center;
-  border-bottom: 1px solid #e5e7eb;
+  margin: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 
 .pilot-content {
@@ -301,10 +303,12 @@ nav {
 
 /* --- MISSION STATEMENT SECTION --- */
 .mission-statement-section {
-  background: #ffffff;
+  background: white;
   padding: 60px 20px;
   text-align: center;
-  border-bottom: 1px solid #e5e7eb;
+  margin: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
 }
 
 .mission-content {
@@ -361,11 +365,11 @@ nav {
   z-index: 1000;
   display: flex;
   border-radius: 10%;
-  background-color: #082154;
+  background: linear-gradient(135deg, #b71158 0%, #d63384 100%);
   justify-content: center;
   align-items: center;
   transition: background-color 0.2s;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(183, 17, 88, 0.3);
 }
 
 .signup-btn {
@@ -374,17 +378,18 @@ nav {
   text-decoration: none;
   cursor: pointer;
   padding: 10px;
-  color:#ffe4e4;
+  color: white;
+  font-weight: 600;
   transition: color 0.2s;
 }
 
 .sticky-signup-container:hover {
-  background: #b71158;
+  background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
   transition: 0.2s;
 }
 
 .sticky-signup-container:hover .signup-btn{
-  color: #ffe4e4;
+  color: white;
 }
 
 @media (max-width: 600px) {
@@ -427,13 +432,23 @@ h1.submain-title{
   color: #b71158;
   margin-bottom: 1rem;
   text-shadow: 2px 4px 12px rgba(0,0,0,0.10);
-  padding-top: 10px; 
-  margin-top: 4rem;
+  padding-top: 20px; 
+  margin-top: 0;
   text-align: center;
   padding-bottom: 0px;
 } 
 
+/* Content boxes for homepage sections */
+.content-box {
+  background: white;
+  margin: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
 
+.features-section.content-box {
+  padding: 40px 20px;
+}
 
 .info-table tr td:last-child {
   border-right: none;
@@ -1076,7 +1091,7 @@ svg.getmatched{
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 1rem;
-            margin-top: 2rem;
+            margin-top: 0;
         }
 
         .features-section {
@@ -1370,6 +1385,85 @@ svg.getmatched{
         .feature-card:nth-child(2) { animation-delay: 0.2s; }
         .feature-card:nth-child(3) { animation-delay: 0.3s; }
         .feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Enhanced Button Animations */
+.cta-button {
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.pilot-signup-btn:hover {
+  background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
+}
+
+.footer-stay-connected-btn:hover {
+  background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
+}
+
+.pilot-apply-btn:hover {
+  background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
+}
+
+/* Navigation responsive improvements */
+@media (max-width: 690px) {
+  .nav-links li {
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    display: block;
+    padding: 16px 24px;
+  }
+  
+  .nav-links li.navsignup_btn {
+    margin-left: 12px;
+    padding: 16px 24px;
+  }
+  
+  .nav-links li a {
+    font-size: 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+  .content-box {
+    margin: 20px 10px;
+    padding: 30px 15px;
+  }
+  
+  .pilot-launch-section,
+  .mission-statement-section {
+    padding: 40px 15px;
+  }
+  
+  .sticky-signup-container {
+    left: 35%;
+    width: 30%;
+    height: 60px;
+  }
+  
+  .signup-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    margin: 15px 5px;
+    padding: 25px 10px;
+  }
+  
+  .sticky-signup-container {
+    left: 25%;
+    width: 50%;
+    height: 50px;
+  }
+}
 
 /*Bolt Icons 
 * {
