@@ -247,13 +247,14 @@ nav {
 
 /* --- PILOT LAUNCH SECTION --- */
 .pilot-launch-section {
-  background: white;
-  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px 20px;
   text-align: center;
-  margin: 40px 20px;
+  margin: 30px 20px;
   border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .pilot-content {
@@ -266,14 +267,15 @@ nav {
   font-weight: 700;
   color: #b71158;
   margin-bottom: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.3;
   letter-spacing: -0.5px;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.05);
 }
 
 .pilot-subheadline {
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   color: #082154;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 2.5rem;
   font-weight: 400;
 }
@@ -305,13 +307,14 @@ nav {
 
 /* --- MISSION STATEMENT SECTION --- */
 .mission-statement-section {
-  background: white;
-  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  padding: 40px 20px;
   text-align: center;
-  margin: 40px 20px;
+  margin: 30px 20px;
   border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
 .mission-content {
@@ -322,7 +325,7 @@ nav {
 .mission-text {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   color: #082154;
-  line-height: 1.7;
+  line-height: 1.6;
   font-weight: 500;
   font-style: italic;
   margin: 0;
@@ -332,19 +335,26 @@ nav {
 @media (max-width: 768px) {
   .pilot-launch-section,
   .mission-statement-section {
-    padding: 40px 15px;
+    padding: 30px 15px;
+    margin: 20px 15px;
   }
   
   .pilot-signup-btn {
     padding: 16px 32px;
     font-size: 1.1rem;
   }
+  
+  .content-box {
+    margin: 20px 10px;
+    padding: 25px 15px;
+  }
 }
 
 @media (max-width: 480px) {
   .pilot-launch-section,
   .mission-statement-section {
-    padding: 30px 10px;
+    padding: 25px 10px;
+    margin: 15px 10px;
   }
   
   .pilot-headline {
@@ -353,6 +363,11 @@ nav {
   
   .pilot-subheadline {
     margin-bottom: 2rem;
+  }
+  
+  .content-box {
+    margin: 15px 5px;
+    padding: 20px 10px;
   }
 }
 
@@ -435,24 +450,37 @@ h1.submain-title{
   font-weight: 600;
   color: #b71158;
   margin-bottom: 1rem;
-  text-shadow: 2px 4px 12px rgba(0,0,0,0.10);
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.08);
   padding-top: 20px; 
   margin-top: 0;
   text-align: center;
   padding-bottom: 0px;
-} 
+  position: relative;
+}
+
+h1.submain-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #b71158, transparent);
+}
 
 /* Content boxes for homepage sections */
 .content-box {
-  background: white;
-  margin: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  margin: 30px 20px;
   border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
 }
 
 .features-section.content-box {
-  padding: 40px 20px;
+  padding: 35px 20px;
 }
 
 .info-table tr td:last-child {
