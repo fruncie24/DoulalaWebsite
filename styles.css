@@ -597,6 +597,203 @@ img.groupoh{
   }
 }
 
+/* Join Pilot Page Styles */
+.pilot-info-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.pilot-info-content {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  color: #082154;
+}
+
+.pilot-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pilot-hero-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #b71158;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.pilot-hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #082154;
+  margin: 0;
+}
+
+.pilot-benefits,
+.pilot-requirements {
+  margin-bottom: 3rem;
+}
+
+.benefits-title,
+.requirements-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #b71158;
+  margin-bottom: 1.5rem;
+}
+
+.benefits-list,
+.requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li,
+.requirements-list li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #082154;
+  margin-bottom: 1rem;
+  padding-left: 25px;
+  position: relative;
+}
+
+.benefits-list li::before {
+  content: "✓";
+  color: #b71158;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.requirements-list li::before {
+  content: "•";
+  color: #b71158;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.benefits-list li strong {
+  color: #b71158;
+  font-weight: 600;
+}
+
+.pilot-cta {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.cta-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #b71158;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #082154;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.pilot-apply-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #b71158 0%, #d63384 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(183, 17, 88, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.pilot-apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(183, 17, 88, 0.4);
+  background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
+}
+
+.pilot-contact-btn {
+  display: inline-block;
+  background: transparent;
+  color: #082154;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 30px;
+  border: 2px solid #082154;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pilot-contact-btn:hover {
+  background: #082154;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Responsive styles for pilot page */
+@media (max-width: 768px) {
+  .pilot-info-content {
+    padding: 40px 25px;
+    margin: 0 15px;
+  }
+  
+  .pilot-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .pilot-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .benefits-title,
+  .requirements-title {
+    font-size: 1.4rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .pilot-info-content {
+    padding: 30px 20px;
+  }
+  
+  .pilot-hero-title {
+    font-size: 1.6rem;
+  }
+  
+  .pilot-apply-btn {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+}
+
 /* Flowchart*/
 .step-text strong {
   font-size: larger;

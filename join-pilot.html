@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join Pilot - Doulala</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="faq"> 
+    <nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        
+        <li>
+          <a href="index.html">
+            <img src="assets/images/Doulala_Lotus.PNG" width="60px" style="padding: 5px;">
+            <img src="assets/images/Doulala_Text_Only.png" width="120px" style="padding: 5px;">
+          </a>
+        </li>
+        <li class="textlink"><a href="index.html">Home</a></li>
+        <li class="textlink"><a href="aboutus.html">About Us</a></li>
+        <li class="textlink active"><a href="join-pilot.html">Join Pilot</a></li>
+        <li class="navsignup_btn"><a href="https://airtable.com/appSX9iiPM13rnZ3j/pagwkXiD2NH6ajpAo/form">Stay Connected</a></li>
+      </ul>
+    </nav>
+    
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+      });
+    </script>
+
+    <h1 class="faq-title">Join Our Pilot Program</h1>
+    
+    <section class="pilot-info-section">
+      <div class="pilot-info-content">
+        <div class="pilot-hero">
+          <h2 class="pilot-hero-title">Be Among the First to Experience Doulala</h2>
+          <p class="pilot-hero-subtitle">
+            Join our exclusive pilot program and help shape the future of maternal care support. 
+            Get early access to our platform with special pilot pricing and personalized attention.
+          </p>
+        </div>
+
+        <div class="pilot-benefits">
+          <h3 class="benefits-title">What You'll Get as a Pilot Member:</h3>
+          <ul class="benefits-list">
+            <li><strong>Early Access:</strong> Be the first to experience our comprehensive doula support platform</li>
+            <li><strong>Special Pricing:</strong> Exclusive pilot program rates designed for accessibility</li>
+            <li><strong>Direct Impact:</strong> Your feedback will directly shape our platform's development</li>
+            <li><strong>Personalized Support:</strong> Extra attention and care as we perfect our services</li>
+            <li><strong>Community Building:</strong> Connect with other pilot members in our founding community</li>
+          </ul>
+        </div>
+
+        <div class="pilot-requirements">
+          <h3 class="requirements-title">Who Can Join:</h3>
+          <ul class="requirements-list">
+            <li>Expectant mothers in the Chicagoland area</li>
+            <li>Recently postpartum mothers (up to 6 months)</li>
+            <li>Committed to providing feedback to help improve our services</li>
+            <li>Access to reliable internet for virtual sessions</li>
+          </ul>
+        </div>
+
+        <div class="pilot-cta">
+          <h3 class="cta-title">Ready to Join?</h3>
+          <p class="cta-description">
+            Applications are being accepted on a rolling basis. Don't miss your chance to be part of 
+            something revolutionary in maternal care.
+          </p>
+          <div class="cta-buttons">
+            <a href="https://form.jotform.com/252657544384062" class="pilot-apply-btn">Apply for Pilot Program</a>
+            <a href="mailto:info@doulala.ai" class="pilot-contact-btn">Have Questions? Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-contact">
+          Questions? Contact us at
+          <a href="mailto:info@doulala.ai">info@doulala.ai</a>
+          — we're happy to help!
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
