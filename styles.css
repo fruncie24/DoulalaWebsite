@@ -550,24 +550,162 @@ img.groupoh{
 /*Footer mAterials*/
 .site-footer {
   width: 100%;
-  background: #ffe4e4;
-  color: #082154;
-  text-align: center;
-  padding: 1.15rem 1.15rem 1rem 1rem;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+  background: #082154;
+  color: #ffe4e4;
   margin-top: 3rem;
   z-index: 10000;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  padding: 3rem 2rem 1rem 2rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
 }
 
 .footer-content {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+  min-width: 200px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 228, 228, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: #b71158;
+  transform: translateY(-2px);
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffe4e4;
+}
+
+.footer-nav {
+  margin-bottom: 1rem;
+}
+
+.footer-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav-links li {
+  margin: 0;
+}
+
+.footer-nav-links a {
+  color: #ffe4e4;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.footer-nav-links a:hover {
+  color: #ffffff;
+  border-bottom-color: #b71158;
+}
+
+.footer-stay-connected {
+  margin-bottom: 1rem;
+}
+
+.footer-stay-connected-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #b71158 0%, #d63384 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(183, 17, 88, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.footer-stay-connected-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(183, 17, 88, 0.4);
+  background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
+}
+
+.footer-contact-info {
+  font-size: 0.9rem;
+  color: #ffe4e4;
+}
+
+.footer-contact-info a {
+  color: #ffe4e4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-info a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 228, 228, 0.2);
+  font-size: 0.9rem;
+  color: rgba(255, 228, 228, 0.8);
 }
 
 .site-footer a {
-  color: #082154;
+  color: #ffe4e4;
   font-weight: bold;
   text-decoration: underline;
   transition: color 0.2s;
@@ -575,25 +713,52 @@ img.groupoh{
 
 .site-footer a:hover {
   color: #fff;
-  background: #082154;
+  background: #b71158;
   border-radius: 4px;
   padding: 0 0em;
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    align-items: center;
+    width: 100%;
+    flex: none;
+  }
+  
+  .footer-nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer-right {
+    align-items: center;
+  }
+}
+
 @media (max-width: 600px) {
   .site-footer {
-    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    padding: 2rem 1rem 1rem 1rem;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
   }
-  .footer-heading {
-    font-size: 1.3rem;
-  }
-  .footer-signup {
-    font-size: 1rem;
-  }
-  .footer-contact {
+  
+  .footer-contact-info {
     font-size: 0.95rem;
+  }
+  
+  .footer-stay-connected-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
