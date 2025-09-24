@@ -238,6 +238,111 @@ nav {
   }
 }
 
+/* --- PILOT LAUNCH SECTION --- */
+.pilot-launch-section {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pilot-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pilot-headline {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #b71158;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.pilot-subheadline {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: #082154;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.pilot-button-container {
+  margin-bottom: 1rem;
+}
+
+.pilot-signup-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #b71158 0%, #d63384 100%);
+  color: white;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(183, 17, 88, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.pilot-signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(183, 17, 88, 0.4);
+  background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
+}
+
+/* --- MISSION STATEMENT SECTION --- */
+.mission-statement-section {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mission-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mission-text {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #082154;
+  line-height: 1.7;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive adjustments for pilot and mission sections */
+@media (max-width: 768px) {
+  .pilot-launch-section,
+  .mission-statement-section {
+    padding: 40px 15px;
+  }
+  
+  .pilot-signup-btn {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pilot-launch-section,
+  .mission-statement-section {
+    padding: 30px 10px;
+  }
+  
+  .pilot-headline {
+    margin-bottom: 1rem;
+  }
+  
+  .pilot-subheadline {
+    margin-bottom: 2rem;
+  }
+}
+
 /* --- STICKY SIGNUP BUTTON --- */
 .sticky-signup-container {
   position: fixed;
