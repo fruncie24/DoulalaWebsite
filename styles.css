@@ -17,7 +17,7 @@
 .landing{
  
   margin-top: 100px;
-  margin-bottom: -130px;
+  margin-bottom: -80px;
 }
 
 body {
@@ -247,9 +247,9 @@ nav {
 
 /* --- PILOT LAUNCH SECTION --- */
 .pilot-launch-section {
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
-  margin: 30px 20px;
+  margin: 20px 20px;
 }
 
 .pilot-content {
@@ -321,9 +321,30 @@ nav {
 
 /* --- MISSION STATEMENT SECTION --- */
 .mission-statement-section {
-  padding: 40px 20px;
+  padding: 30px 20px;
   text-align: center;
-  margin: 30px 20px;
+  margin: 20px 20px;
+}
+
+.mission-content {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 30px 35px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 600;
+  color: #b71158;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.05);
 }
 
 .mission-text {
@@ -332,8 +353,7 @@ nav {
   line-height: 1.6;
   font-weight: 500;
   font-style: italic;
-  margin: 0 auto;
-  max-width: 700px;
+  margin: 0;
   text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
 }
 
@@ -341,12 +361,16 @@ nav {
 @media (max-width: 768px) {
   .pilot-launch-section,
   .mission-statement-section {
-    padding: 30px 15px;
-    margin: 20px 15px;
+    padding: 25px 15px;
+    margin: 15px 15px;
   }
   
   .pilot-announcement {
     padding: 20px 15px;
+  }
+  
+  .mission-content {
+    padding: 25px 20px;
   }
   
   .pilot-signup-btn {
@@ -358,12 +382,16 @@ nav {
 @media (max-width: 480px) {
   .pilot-launch-section,
   .mission-statement-section {
-    padding: 25px 10px;
-    margin: 15px 10px;
+    padding: 20px 10px;
+    margin: 10px 10px;
   }
   
   .pilot-announcement {
     padding: 15px 10px;
+  }
+  
+  .mission-content {
+    padding: 20px 15px;
   }
   
   .pilot-headline-main {
@@ -452,7 +480,7 @@ nav {
 h1.submain-title{
   font-size: 1.8rem;
   font-weight: 600;
-  color: #b71158;
+  color: #082154;
   margin-bottom: 1rem;
   text-shadow: 1px 2px 8px rgba(0,0,0,0.08);
   padding-top: 20px; 
@@ -460,17 +488,6 @@ h1.submain-title{
   text-align: center;
   padding-bottom: 0px;
   position: relative;
-}
-
-h1.submain-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #b71158, transparent);
 }
 
 /* Content boxes for homepage sections */
@@ -1159,7 +1176,8 @@ svg.getmatched{
         }
 
         .features-section {
-            padding: 0;
+            padding: 20px 0;
+            margin: 15px 0;
         }
 
         .section-header {
