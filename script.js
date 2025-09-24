@@ -1,5 +1,5 @@
 let currentSlide = 0;
-        const totalSlides = 4;
+        const totalSlides = 3;
         const carousel = document.getElementById('carousel');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');

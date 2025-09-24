@@ -27,7 +27,7 @@ body {
   flex-direction: column;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(360deg,rgba(231, 162, 186, 1) 0%, rgba(255, 240, 240, 1) 100%);
+  background: linear-gradient(360deg, rgba(231, 162, 186, 1) 0%, rgba(255, 240, 240, 1) 100%);
 }
 
 html, body {
@@ -38,7 +38,13 @@ html, body {
 
 body.faq{
   min-height: 100vh;
-  background: #082154;
+  background: linear-gradient(360deg, rgba(231, 162, 186, 1) 0%, rgba(255, 240, 240, 1) 100%);
+  color: #FFFFFF;
+  margin: 0;
+}
+
+body.join-pilot{
+  background: linear-gradient(360deg, rgba(231, 162, 186, 1) 0%, rgba(255, 240, 240, 1) 100%);
   color: #FFFFFF;
   margin: 0;
 }
@@ -468,7 +474,7 @@ img.groupoh{
   font-size: 3rem;
   font-weight: 400;
   margin-bottom: 0%;
-  color: #ffe4e4; /* Or your preferred color */
+  color: #082154;
   letter-spacing: 1px;
   text-shadow: 1px 2px 8px rgba(0,0,0,0.08);
 }
@@ -497,7 +503,7 @@ img.groupoh{
   font-weight: 600;
   cursor: pointer;
   padding: 10px 10px ;
-  color: #ffe4e4;
+  color: #082154;
   outline: none;
   transition: color 0.2s;
 }
@@ -509,7 +515,7 @@ img.groupoh{
   overflow: hidden;
   transition: 0.5s ease, opacity 0.5s ease;
   padding: 0 10px;
-  color: #ffe4e4;
+  color: #082154;
 }
 
 .faq-item.active .faq-answer{
@@ -530,11 +536,11 @@ img.groupoh{
 }
 
 .faq-item .faq-icon {
-  background-image: url('assets/images/plus-white-cropped-ffe4e4.png');
+  background-image: url('assets/images/plus-cropped.png');
 }
 
 .faq-item.active .faq-icon{
-  background-image: url('assets/images/minus_white_cropped_ffe4e4.png');
+  background-image: url('assets/images/minus_cropped.png');
 }
 
 .cell-stack {
@@ -550,7 +556,7 @@ img.groupoh{
 /*Footer mAterials*/
 .site-footer {
   width: 100%;
-  background: #082154;
+  background: #082154 !important;
   color: #ffe4e4;
   margin-top: 3rem;
   z-index: 10000;
@@ -763,6 +769,18 @@ img.groupoh{
 }
 
 /* Join Pilot Page Styles - Updated */
+.pilot-announcement {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #b71158;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  background: rgba(183, 17, 88, 0.1);
+  border-radius: 10px;
+  border: 2px solid #b71158;
+}
+
 .pilot-info-section {
   max-width: 800px;
   margin: 40px auto;
@@ -846,10 +864,18 @@ img.groupoh{
   border-top: 2px solid #f0f0f0;
 }
 
+.privacy-statement {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
 .cta-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .pilot-apply-btn {
@@ -1978,3 +2004,9 @@ svg.getmatched{
     gap: 20px;
   }
 }
+
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
