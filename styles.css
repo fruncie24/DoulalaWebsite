@@ -15,9 +15,8 @@
 }
 
 .landing{
- 
   margin-top: 100px;
-  margin-bottom: -60px;
+  margin-bottom: -40px;
 }
 
 body {
@@ -247,9 +246,9 @@ nav {
 
 /* --- PILOT LAUNCH SECTION --- */
 .pilot-launch-section {
-  padding: 30px 20px;
+  padding: 20px 20px;
   text-align: center;
-  margin: 20px 20px;
+  margin: 15px 20px;
 }
 
 .pilot-content {
@@ -258,13 +257,12 @@ nav {
 }
 
 .pilot-announcement {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-  padding: 25px 30px;
+  background: #ffffff;
+  border: 2px solid #b71158;
+  padding: 30px 35px;
   border-radius: 15px;
   margin-bottom: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
 }
 
 .pilot-headline-main {
@@ -321,9 +319,9 @@ nav {
 
 /* --- MISSION STATEMENT SECTION --- */
 .mission-statement-section {
-  padding: 30px 20px;
+  padding: 20px 20px;
   text-align: center;
-  margin: 20px 20px;
+  margin: 15px 20px;
 }
 
 .mission-content {
@@ -361,12 +359,12 @@ nav {
 @media (max-width: 768px) {
   .pilot-launch-section,
   .mission-statement-section {
-    padding: 25px 15px;
-    margin: 15px 15px;
+    padding: 20px 15px;
+    margin: 10px 15px;
   }
   
   .pilot-announcement {
-    padding: 20px 15px;
+    padding: 25px 20px;
   }
   
   .mission-content {
@@ -382,12 +380,12 @@ nav {
 @media (max-width: 480px) {
   .pilot-launch-section,
   .mission-statement-section {
-    padding: 20px 10px;
-    margin: 10px 10px;
+    padding: 15px 10px;
+    margin: 8px 10px;
   }
   
   .pilot-announcement {
-    padding: 15px 10px;
+    padding: 20px 15px;
   }
   
   .mission-content {
@@ -751,10 +749,11 @@ img.groupoh{
   box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
   border: none;
   cursor: pointer;
+  transform: scale(1);
 }
 
 .footer-pilot-btn:hover {
-  transform: translateY(-2px) scale(1.05);
+  transform: translateY(-2px) scale(1);
   box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4);
   background: linear-gradient(135deg, #c2185b 0%, #d81b60 100%);
 }
@@ -772,10 +771,11 @@ img.groupoh{
   box-shadow: 0 4px 15px rgba(183, 17, 88, 0.3);
   border: none;
   cursor: pointer;
+  transform: scale(1);
 }
 
 .footer-stay-connected-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1);
   box-shadow: 0 8px 25px rgba(183, 17, 88, 0.4);
   background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
 }
@@ -1176,8 +1176,8 @@ svg.getmatched{
         }
 
         .features-section {
-            padding: 20px 0;
-            margin: 15px 0;
+            padding: 15px 0;
+            margin: 10px 0;
         }
 
         .section-header {
