@@ -914,6 +914,40 @@ img.groupoh{
   font-style: italic;
 }
 
+/* Why Join Our Pilot section */
+.why-join-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #b71158;
+  text-align: center;
+  margin: 2.5rem 0 2rem 0;
+  letter-spacing: -0.5px;
+}
+
+.pilot-benefits {
+  margin: 2rem 0;
+}
+
+.benefit-item {
+  margin-bottom: 2rem;
+}
+
+.benefit-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #002F6C;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.benefit-description {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #002F6C;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -973,6 +1007,14 @@ img.groupoh{
   
   .pilot-apply-btn {
     padding: 16px 32px;
+    font-size: 1.1rem;
+  }
+  
+  .why-join-heading {
+    font-size: 1.6rem;
+  }
+  
+  .benefit-title {
     font-size: 1.1rem;
   }
 }
