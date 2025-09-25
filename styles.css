@@ -935,9 +935,11 @@ img.groupoh{
 .benefit-title {
   font-size: 1.3rem;
   font-weight: 700;
+  font-style: italic;
   color: #002F6C;
   margin-bottom: 0.5rem;
   line-height: 1.3;
+  text-align: left;
 }
 
 .benefit-description {
@@ -946,6 +948,7 @@ img.groupoh{
   color: #002F6C;
   line-height: 1.6;
   margin: 0;
+  text-align: left;
 }
 
 .cta-buttons {
