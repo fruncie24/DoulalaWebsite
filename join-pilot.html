@@ -41,31 +41,54 @@
       <div class="pilot-info-content">
         <div class="pilot-intro">
           <p class="pilot-intro-text">
-            We're thrilled you're interested in joining our pilot. Please read the information below and click the sign-up button when you're ready to get started!
+            We're thrilled you're interested in joining our pilot! Please read the information below and click the sign-up button to get started.
           </p>
           
           <p class="pilot-description">
-            We are launching our initial pilot program and would be honored to support you on this special journey. Our pilot offers flexible scheduling, personalized care, and access to certified doulas who are experts in prenatal and postpartum support. As a pilot participant, you will have unlimited access to small group "office hour" sessions led by our certified doulas, covering a range of important topics to help empower you during your pregnancy and new motherhood journey. For those seeking additional individualized care, you can book one-on-one doula sessions at your convenience.
+            We are launching our initial pilot program and would be honored to support you on this special journey. Our pilot offers flexible scheduling, personalized care, and access to certified doulas who are experts in prenatal and postpartum support. As a pilot participant, you will have unlimited access to small group "office hour" sessions led by our certified doulas, covering a wide range of important topics from prenatal to postpartum to empower you throughout your pregnancy and new motherhood journey. For those seeking additional individualized care, one-on-one doula sessions can be booked at your convenience.
           </p>
           
           <p class="pilot-description">
-            The best part? It's entirely virtual, making it easy for you to get support wherever and whenever works best for your schedule and lifestyle.
+            The best part? It's entirely virtual, allowing you to get support wherever and whenever it fits your schedule and lifestyle.
           </p>
           
           <p class="pilot-announcement">
-            <strong>Sign up by October 17th to participate in our pilot</strong>
+            <strong>Sign up by October 17th to participate in our pilot.</strong>
           </p>
         </div>
 
-        <div class="pilot-details">
-          <h3 class="details-title">Pilot Details:</h3>
-          <ul class="details-list">
-            <li><strong>Who's eligible:</strong> Currently pregnant women and women less than 1 year postpartum</li>
-            <li><strong>Pilot Start Date:</strong> October 20, 2025</li>
-            <li><strong>Duration:</strong> 8 weeks</li>
-            <li><strong>Cost:</strong> $50 to enroll in pilot and access group office hour sessions; $15 per one-on-one session booked with a doula</li>
-            <li><strong>Location:</strong> Virtual — all sessions held via Google Meet</li>
-          </ul>
+        <!-- Expandable Sections -->
+        <div class="expandable-sections">
+          <div class="expandable-item">
+            <button class="expandable-header" aria-expanded="false">
+              <span class="header-text">Pilot Details</span>
+              <span class="expand-icon">+</span>
+            </button>
+            <div class="expandable-content">
+              <ul class="details-list">
+                <li><strong>Who's eligible:</strong> Currently pregnant women and women less than 1 year postpartum</li>
+                <li><strong>Pilot Start Date:</strong> October 20, 2025</li>
+                <li><strong>Duration:</strong> 8 weeks</li>
+                <li><strong>Location:</strong> Virtual — all sessions will be held via a secure meeting platform</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="expandable-item">
+            <button class="expandable-header" aria-expanded="false">
+              <span class="header-text">Pilot Cost</span>
+              <span class="expand-icon">+</span>
+            </button>
+            <div class="expandable-content">
+              <p class="cost-intro">Enroll in our pilot for just $75 per month. Your pilot package includes:</p>
+              <ul class="details-list">
+                <li>Access to all office hours</li>
+                <li>One complementary private doula consultation</li>
+                <li>Additional private doula sessions at $30 per hour</li>
+              </ul>
+              <p class="cost-savings">Our pilot pricing offers an exclusive introductory rate with up to 50% savings compared to traditional doula packages.</p>
+            </div>
+          </div>
         </div>
 
         <div class="pilot-cta">
@@ -97,4 +120,31 @@
       </div>
     </footer>
   </body>
+  
+  <script>
+    // Expandable sections functionality
+    document.querySelectorAll('.expandable-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const content = item.querySelector('.expandable-content');
+        const icon = header.querySelector('.expand-icon');
+        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+        
+        // Toggle the expanded state
+        header.setAttribute('aria-expanded', !isExpanded);
+        item.classList.toggle('active');
+        
+        // Update icon
+        icon.textContent = isExpanded ? '+' : '–';
+      });
+      
+      // Keyboard accessibility
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          header.click();
+        }
+      });
+    });
+  </script>
 </html>

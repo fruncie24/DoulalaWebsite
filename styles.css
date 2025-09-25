@@ -1437,6 +1437,90 @@ svg.getmatched{
   background: linear-gradient(135deg, #a0104e 0%, #c02a6b 100%);
 }
 
+/* Expandable Sections */
+.expandable-sections {
+  margin: 2rem 0;
+}
+
+.expandable-item {
+  margin-bottom: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.expandable-header {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #b71158;
+  transition: background-color 0.2s ease;
+}
+
+.expandable-header:hover {
+  background-color: #f9fafb;
+}
+
+.expandable-header:focus {
+  outline: 2px solid #b71158;
+  outline-offset: -2px;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.expand-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b71158;
+  transition: transform 0.3s ease;
+  width: 24px;
+  text-align: center;
+}
+
+.expandable-header[aria-expanded="true"] .expand-icon {
+  transform: rotate(180deg);
+}
+
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.expandable-item.active .expandable-content {
+  max-height: 500px;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.expandable-content .details-list {
+  margin: 1rem 0;
+}
+
+.expandable-content .cost-intro,
+.expandable-content .cost-savings {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #082154;
+  margin: 1rem 0;
+}
+
+.expandable-content .cost-savings {
+  font-style: italic;
+  font-weight: 500;
+}
+
 /* Navigation responsive improvements */
 @media (max-width: 690px) {
   .nav-links li {
