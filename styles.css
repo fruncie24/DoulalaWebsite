@@ -1396,6 +1396,7 @@ svg.getmatched{
             font-weight: 600;
             color: #b71158;
             margin: 0;
+            text-align: center;
         }
 
         .feature-description {
@@ -1403,6 +1404,7 @@ svg.getmatched{
             color: #082154;
             line-height: 1.7;
             margin-bottom: 1.5rem;
+            text-align: left;
         }
 
         .feature-highlight {
