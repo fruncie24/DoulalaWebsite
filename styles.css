@@ -553,13 +553,13 @@ nav {
   background: #ffffff;
   border: 2px solid #b71158;
   border-radius: 12px;
-  padding: 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   width: 100%;
   height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   box-shadow: 0 4px 15px rgba(183, 17, 88, 0.15);
   transition: all 0.3s ease;
 }
@@ -575,7 +575,7 @@ nav {
   color: #082154;
   margin: 0;
   text-align: center;
-  flex: 0 0 auto;
+  flex: 0 0 20px;
   height: 20px;
   line-height: 20px;
 }
@@ -589,7 +589,7 @@ nav {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto;
 }
 
 .step-icon {
@@ -603,14 +603,12 @@ nav {
   font-size: 1rem;
   color: #082154;
   line-height: 1.6;
-  margin: 0 0 2rem 0;
+  margin: 0;
   font-weight: 500;
   text-align: center;
   padding: 0 1rem;
   max-width: 200px;
-  flex: 1 0 auto;
-  display: flex;
-  align-items: center;
+  flex: 0 0 auto;
 }
 
 .step-arrow {
@@ -641,17 +639,17 @@ nav {
 
   .step-box {
     height: 260px;
-    padding: 1.75rem 1.5rem;
+    padding: 1.75rem 1.5rem 1.75rem 1.5rem;
   }
 
   .step-icon-wrapper {
-    margin: 0 auto 1.25rem auto;
+    margin: 0 auto;
   }
 
   .step-text {
     max-width: 170px;
     padding: 0 0.75rem;
-    margin: 0 0 1.75rem 0;
+    margin: 0;
   }
 
   .step-icon-wrapper {
@@ -690,17 +688,17 @@ nav {
   .step-box {
     height: auto;
     min-height: 220px;
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 
   .step-icon-wrapper {
-    margin: 0 auto 1.25rem auto;
+    margin: 0 auto;
   }
 
   .step-text {
     max-width: 320px;
     padding: 0 1.5rem;
-    margin: 0 0 1.75rem 0;
+    margin: 0;
   }
 
   .step-arrow {
@@ -720,18 +718,18 @@ nav {
   }
 
   .step-box {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 2rem 1.5rem;
     min-height: 200px;
   }
 
   .step-icon-wrapper {
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
   }
 
   .step-text {
     max-width: 260px;
     padding: 0 1rem;
-    margin: 0 0 1.5rem 0;
+    margin: 0;
   }
 
   .step-icon-wrapper {
