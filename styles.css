@@ -536,7 +536,7 @@ nav {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: nowrap;
 }
 
@@ -544,22 +544,23 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
-  max-width: 240px;
+  flex: 1 1 0;
+  max-width: 250px;
+  min-width: 200px;
 }
 
 .step-box {
   background: #ffffff;
   border: 2px solid #b71158;
   border-radius: 12px;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 2rem;
   width: 100%;
-  height: 220px;
+  height: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1rem;
   box-shadow: 0 4px 15px rgba(183, 17, 88, 0.15);
   transition: all 0.3s ease;
 }
@@ -573,7 +574,7 @@ nav {
   font-size: 0.85rem;
   font-weight: 700;
   color: #082154;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .step-icon-wrapper {
@@ -598,10 +599,10 @@ nav {
   font-size: 1rem;
   color: #082154;
   line-height: 1.5;
-  margin: 0.5rem 0 0 0;
+  margin: 0.75rem 0 0 0;
   font-weight: 500;
   text-align: center;
-  padding: 0 0.75rem;
+  padding: 0 1rem;
 }
 
 .step-arrow {
@@ -610,7 +611,7 @@ nav {
   height: 30px;
   color: #b71158;
   align-self: center;
-  margin-top: 30px;
+  margin-top: 45px;
 }
 
 .step-arrow svg {
@@ -622,17 +623,18 @@ nav {
 /* Responsive adjustments for simple support section */
 @media (max-width: 1024px) {
   .steps-container {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .step-wrapper {
-    max-width: 200px;
+    max-width: 210px;
+    min-width: 180px;
   }
 
   .step-box {
-    height: 200px;
-    padding: 1.75rem 1.25rem;
-    gap: 0.65rem;
+    height: 220px;
+    padding: 2rem 1.5rem;
+    gap: 0.85rem;
   }
 
   .step-icon-wrapper {
@@ -659,19 +661,20 @@ nav {
   .steps-container {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .step-wrapper {
     max-width: 100%;
     width: 100%;
+    min-width: auto;
   }
 
   .step-box {
     height: auto;
-    min-height: 160px;
-    padding: 1.5rem;
-    gap: 0.75rem;
+    min-height: 180px;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
   }
 
   .step-arrow {
@@ -691,9 +694,9 @@ nav {
   }
 
   .step-box {
-    padding: 1.25rem;
-    gap: 0.75rem;
-    min-height: 150px;
+    padding: 1.75rem 1.25rem;
+    gap: 0.85rem;
+    min-height: 170px;
   }
 
   .step-icon-wrapper {
