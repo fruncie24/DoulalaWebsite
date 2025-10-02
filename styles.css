@@ -553,14 +553,14 @@ nav {
   background: #ffffff;
   border: 2px solid #b71158;
   border-radius: 12px;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2.5rem;
   width: 100%;
-  height: 240px;
+  height: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.25rem;
   box-shadow: 0 4px 15px rgba(183, 17, 88, 0.15);
   transition: all 0.3s ease;
 }
@@ -574,7 +574,7 @@ nav {
   font-size: 0.85rem;
   font-weight: 700;
   color: #082154;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .step-icon-wrapper {
@@ -598,11 +598,12 @@ nav {
 .step-text {
   font-size: 1rem;
   color: #082154;
-  line-height: 1.5;
-  margin: 0.75rem 0 0 0;
+  line-height: 1.6;
+  margin: 1rem 0 0 0;
   font-weight: 500;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
+  max-width: 180px;
 }
 
 .step-arrow {
@@ -611,7 +612,7 @@ nav {
   height: 30px;
   color: #b71158;
   align-self: center;
-  margin-top: 45px;
+  margin-top: 55px;
 }
 
 .step-arrow svg {
@@ -632,9 +633,13 @@ nav {
   }
 
   .step-box {
-    height: 220px;
-    padding: 2rem 1.5rem;
-    gap: 0.85rem;
+    height: 240px;
+    padding: 2.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .step-text {
+    max-width: 160px;
   }
 
   .step-icon-wrapper {
@@ -672,9 +677,13 @@ nav {
 
   .step-box {
     height: auto;
-    min-height: 180px;
-    padding: 2rem 1.5rem;
-    gap: 1rem;
+    min-height: 200px;
+    padding: 2.5rem 2rem;
+    gap: 1.25rem;
+  }
+
+  .step-text {
+    max-width: 280px;
   }
 
   .step-arrow {
@@ -694,9 +703,13 @@ nav {
   }
 
   .step-box {
-    padding: 1.75rem 1.25rem;
-    gap: 0.85rem;
-    min-height: 170px;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+    min-height: 190px;
+  }
+
+  .step-text {
+    max-width: 240px;
   }
 
   .step-icon-wrapper {
