@@ -552,14 +552,14 @@ nav {
   background: #ffffff;
   border: 2px solid #b71158;
   border-radius: 12px;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  padding: 2rem 1.5rem;
   width: 100%;
   height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
   box-shadow: 0 4px 15px rgba(183, 17, 88, 0.15);
   transition: all 0.3s ease;
 }
@@ -571,10 +571,9 @@ nav {
 
 .step-number {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #082154;
-  opacity: 0.6;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .step-icon-wrapper {
@@ -599,10 +598,10 @@ nav {
   font-size: 1rem;
   color: #082154;
   line-height: 1.5;
-  margin: 0;
+  margin: 0.5rem 0 0 0;
   font-weight: 500;
   text-align: center;
-  padding: 0 0.5rem;
+  padding: 0 0.75rem;
 }
 
 .step-arrow {
@@ -632,7 +631,8 @@ nav {
 
   .step-box {
     height: 200px;
-    padding: 1.75rem 1.25rem 1.25rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+    gap: 0.65rem;
   }
 
   .step-icon-wrapper {
@@ -671,6 +671,7 @@ nav {
     height: auto;
     min-height: 160px;
     padding: 1.5rem;
+    gap: 0.75rem;
   }
 
   .step-arrow {
@@ -691,7 +692,7 @@ nav {
 
   .step-box {
     padding: 1.25rem;
-    gap: 0.85rem;
+    gap: 0.75rem;
     min-height: 150px;
   }
 
