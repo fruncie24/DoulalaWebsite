@@ -1349,8 +1349,9 @@ img.groupoh{
   margin: 2rem 0;
 }
 
-.benefit-item {
+.pilot-benefits .benefit-item {
   margin-bottom: 2rem;
+  display: block;
 }
 
 .benefit-title {
