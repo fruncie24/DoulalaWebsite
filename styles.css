@@ -379,9 +379,9 @@ nav {
 }
 
 .pilot-subheadline {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: 1.1rem;
   color: #082154;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 1rem;
   margin-top: 0;
   font-weight: 400;
